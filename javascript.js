@@ -10,10 +10,13 @@ function getComputerChoice() {
     switch (randomNumber) {
         case 0:
             computerChoice = "rock";
+            break;
         case 1:
             computerChoice = "paper";
+            break;
         case 2:
             computerChoice = "scissors";
+            break;
     }
 
     // Return result of selection process
