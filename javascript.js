@@ -22,3 +22,17 @@ function getComputerChoice() {
     // Return result of selection process
     return computerChoice;
 }
+
+function getHumanChoice() {
+    // Declare local function variable
+    let humanChoice = "";
+
+    // Prompt user to choose between options
+    humanChoice = prompt("Rock, paper, or scissors? Select an option: ")
+
+    // Return chosen option
+    return humanChoice;
+}
+
+let x = getHumanChoice();
+console.log(x);
