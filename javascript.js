@@ -92,9 +92,39 @@ function playGame() {
     let humanScore = 0;
     let computerScore = 0;
 
-    // Show scores
-    // console.log("");
-    // console.log("The current scores are:");
-    // console.log("Computer: " + computerScore);
-    // console.log("Player: " + humanScore);
+    // Declare variable for round winner
+    let winnerRound = "";
+
+    // Play five rounds
+    for (let i = 1; i <= 5; i++) {
+        winnerRound = playRound(getComputerChoice(), getHumanChoice());
+        
+        // Increment scores
+        switch (winnerRound) {
+            case "computer":
+                computerScore += 1;
+                break;
+            case "player":
+                humanScore += 1;
+                break;
+
+        // Show scores
+        console.log("");
+        console.log("The current scores are:");
+        console.log("Computer: " + computerScore);
+        console.log("Player: " + humanScore);
+        console.log("");
+        }
+    }
+
+    // Declare overall winner
+    if (humanScore === computerScore) {
+        console.log("The Game is over. It has resulted in a draw.");
+    } else {
+        if (humanScore > computerScore) {
+            console.log("The Game is over. You won!");
+            } else {
+                console.log("The Game is over. You lost!");
+            }
+    }
 }
