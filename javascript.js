@@ -107,6 +107,7 @@ function playGame() {
             case "player":
                 humanScore += 1;
                 break;
+        }
 
         // Show scores
         console.log("");
@@ -114,7 +115,6 @@ function playGame() {
         console.log("Computer: " + computerScore);
         console.log("Player: " + humanScore);
         console.log("");
-        }
     }
 
     // Declare overall winner
