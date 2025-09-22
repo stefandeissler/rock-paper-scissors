@@ -36,7 +36,7 @@ function getHumanChoice() {
 
 function playGame() {
 
-    function playRound(humanChoice, computerChoice) {
+    function playRound(computerChoice, humanChoice) {
         // Declare result variable winner
         let winner = "";
         
