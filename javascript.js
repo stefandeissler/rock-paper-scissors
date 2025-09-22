@@ -37,6 +37,9 @@ function getHumanChoice() {
 function playGame() {
 
     function playRound(humanChoice, computerChoice) {
+        // Declare result variable winner
+        let winner = "";
+        
         // Convert humanChoice string to lower case
         humanChoice = humanChoice.toLowerCase();
 
@@ -48,46 +51,50 @@ function playGame() {
         // Show result (win, loss or draw)
         if (humanChoice === computerChoice) {
             console.log("It's a draw. No one gets a point.")
+            winner = "none";
         } else {
             switch (humanChoice) {
                 case "rock":
                     if (computerChoice === "paper") {
                         console.log("Paper beats rock. You lose!");
-                        computerScore += 1;
+                        winner = "computer";
                     } else {    // computerChoice === "scissors"
                         console.log("Rock beats scissors. You win!");
-                        humanScore += 1;
+                        winner = "player";
                     };
                     break;
                 case "paper":
                     if (computerChoice === "rock") {
                         console.log("Paper beats rock. You win!");
-                        humanScore += 1;
+                        winner = "player";
                     } else {    // computerChoice === "scissors"
                         console.log("Scissors beat paper. You lose!");
-                        computerScore += 1;
+                        winner = "computer";
                     };
                     break;
                 case "scissors":
                     if (computerChoice === "rock") {
                         console.log("Rock beats scissors. You lose!");
-                        computerScore += 1;
+                        winner = "computer";
                     } else {    // computerChoice === "paper"
                         console.log("Scissors beat paper. You win!");
-                        humanScore += 1;
+                        winner = "player";
                     };
                     break;
             }
         }
 
-        // Show scores
-        console.log("");
-        console.log("The current scores are:");
-        console.log("Computer: " + computerScore);
-        console.log("Player: " + humanScore);
+        // Return: computer, player, or none
+        return winner;
     }
 
     // Declare global score variables
     let humanScore = 0;
     let computerScore = 0;
+
+    // Show scores
+    // console.log("");
+    // console.log("The current scores are:");
+    // console.log("Computer: " + computerScore);
+    // console.log("Player: " + humanScore);
 }
