@@ -128,3 +128,6 @@ function playGame() {
             }
     }
 }
+
+// Start game
+playGame();
