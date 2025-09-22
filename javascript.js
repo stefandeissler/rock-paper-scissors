@@ -88,3 +88,5 @@ function playRound(humanChoice, computerChoice) {
     console.log("Computer: " + computerScore);
     console.log("Player: " + humanScore);
 }
+
+playRound(getComputerChoice(), getHumanChoice());
